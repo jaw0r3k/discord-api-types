@@ -423,6 +423,10 @@ export enum GuildFeature {
 	 */
 	Featurable = 'FEATURABLE',
 	/**
+	 * Guild has access to guest invites 
+	 */
+	GuestsEnabled = 'GUESTS_ENABLED',
+	/**
 	 * Guild is listed in a directory channel
 	 */
 	HasDirectoryEntry = 'HAS_DIRECTORY_ENTRY',

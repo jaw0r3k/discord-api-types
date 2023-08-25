@@ -33,6 +33,14 @@ export interface APIInvite {
 	 */
 	code: string;
 	/**
+	 * Invite flags combined as a bitfield
+	 *
+	 * See https://discord.com/developers/docs/resources/invite#invite-object-invite-flags
+	 * 
+	 * See https://en.wikipedia.org/wiki/Bit_field
+	 */
+	flags?: InviteFlags;
+	/**
 	 * The guild this invite is for
 	 *
 	 * See https://discord.com/developers/docs/resources/guild#guild-object
@@ -89,6 +97,13 @@ export interface APIInvite {
 	 * The guild scheduled event data, returned from the `GET /invites/<code>` endpoint when `guild_scheduled_event_id` is a valid guild scheduled event id
 	 */
 	guild_scheduled_event?: APIGuildScheduledEvent;
+}
+
+/**
+ * https://discord.com/developers/docs/resources/invite#invite-object-invite-flags
+ */
+export enum InviteFlags {
+	Guest = 1
 }
 
 /**
